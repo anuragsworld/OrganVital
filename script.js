@@ -68,4 +68,11 @@ for (i=0; i < acc.length; i++){
         }
     })
 }
+/////login page
+const contactWrapper = document.querySelector('.contact-wrapper');
+const registerLink = document.querySelector('.register-link');
+const loginLink = document.querySelector('.login-link');
+registerLink.onclick = () => {
+    contactWrapper.classList.add('active');
 
+}
