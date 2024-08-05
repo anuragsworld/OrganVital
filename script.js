@@ -21,6 +21,40 @@ modeToggle.addEventListener("click", () => {
         localStorage.setItem("mode", "dark-mode")
     }
 });
+//js code to animate images
+// let random = Math.floor(Math.random() * quoteTexts.length);
+const quoteimage = document.getElementById('quoteimg');
+const quoteImages = ['components/kidney.png','components/heart.png','components/liver.png'];
+
+const quoteText = document.querySelector('.quote-para');
+const quoteTexts = [
+    '<p>Organ Donors Give</p><p>Life When</p><p class="red">They\'re Gone!!</p><p class="writer"></p>',
+    '<p>Organ Donors Give </p><p>the Gift of Life</p><p class="red">to Others!</p><p class="writer"></p>',
+    '<p>Be a Hero,</p><p>Donate Organs</p><p class="red">and Save Lives!</p><p class="writer"></p>'
+];
+
+let intervalId;
+function startInterval() {
+    intervalId = setInterval(function() {
+        let random = Math.floor(Math.random() * quoteTexts.length);
+        quoteText.innerHTML = quoteTexts[random];
+        quoteimage.src = quoteImages[random];
+    }, 800);
+}
+function stopInterval() {
+    clearInterval(intervalId);
+}
+
+// Start the interval when the page loads
+startInterval();
+
+// Stop the interval on hover
+quoteText.addEventListener('mouseenter', stopInterval);
+quoteimage.addEventListener('mouseenter', stopInterval);
+
+// Restart the interval when not hovering
+quoteText.addEventListener('mouseleave', startInterval);
+quoteimage.addEventListener('mouseleave', startInterval);
 
 
 //js codde to toggle dark and light mode
@@ -75,4 +109,10 @@ const loginLink = document.querySelector('.login-link');
 registerLink.onclick = () => {
     contactWrapper.classList.add('active');
 
+}
+
+
+
+loginLink.onclick = () => {
+    contactWrapper.classList.remove('active');
 }

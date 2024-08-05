@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     padding: 0;
@@ -10,7 +9,7 @@
 :root{
     --body-color: #E6E6FA;
     --nav-color: #f2f2f2;
-    --side-nav: #007bff;
+    --side-nav: #f2f2f2;
     --text-color: #000000;
     --search-bar: #f2f2f2;
     --search-text: #010718;
@@ -131,14 +130,16 @@ nav .nav-bar .logo a{
     opacity: 1;
 }
 .register-button{
-    margin-left: 50px;
+    
+    margin-left: 80px;
     margin-right: 50px;
+    
 }
 .nav-btn{
    
     padding:5px 15px;
     border: none;
-
+    text-decoration: none !important;
     font-weight: 500;
     border-radius: 30px;
     display: flex;
@@ -274,70 +275,170 @@ body.dark .search-field i{
 
 
 /* ----------------------------------------CONTENT----------------------------------------- */
-.quote{
+.quote {
     display: flex;
     font-size: 60px;
-    /* font-style: italic;     */
     font-weight: 700;
     margin-left: 80px;
     font-family: "Playfair Display", serif;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0;
     font-optical-sizing: auto;
     color: var(--text-color);
-
+    cursor: pointer;
 }
-.quote p{
+
+.quote p {
     font-size: 60px;
-    /* font-style: italic;     */
     font-weight: 700;
     margin-left: 80px;
     font-family: "Playfair Display", serif;
-    
     font-optical-sizing: auto;
 }
-.quote img{
-    margin-left: 300px;
+
+.quote .writer {
+    font-size: 40px;
+    margin-left: 500px;
 }
-.quote .red{
+
+.quote img {
+    position: absolute;
+    right: 70px;
+    width: 350px;
+    height: 300px;
+}
+
+.quote .red {
     color: rgb(210, 8, 8);
 }
-.para-section{
-    margin: 20px ;
-    padding: 0 10px 0 10px;
+
+.para-section {
+    margin: 20px;
+    padding: 0 10px;
     color: var(--text-color);
     padding: 0 30px;
 }
-.para-section h4{
+
+.para-section h4 {
     font-size: 30px;
     padding: 10px 0;
     font-style: italic;
     text-decoration: underline;
-  
-   
-
- 
 }
-.parasection2{
+
+.parasection2 {
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .quote {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .quote p {
+        font-size: 40px;
+        margin-left: 0;
+    }
+    
+    .quote .writer {
+        font-size: 30px;
+        margin-left: 0;
+    }
+    
+    .quote img {
+        position: static;
+        width: 250px;
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote p {
+        font-size: 30px;
+    }
+    
+    .quote .writer {
+        font-size: 20px;
+    }
+    
+    .quote img {
+        width: 200px;
+        height: 150px;
+    }
+}
+@media (max-width: 768px) {
+    .para-section h4 {
+        font-size: 24px;
+    }
+
+    .parasection2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parasection2 p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    .aboutus p {
+        font-size: 16px;
+    }
+
+    .aboutus h2 {
+        font-size: 24px;
+    }
+
+    .aboutus h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .para-section h4 {
+        font-size: 20px;
+    }
+
+    .parasection2 p {
+        font-size: 14px;
+    }
+
+
+    .aboutus p {
+        font-size: 14px;
+    }
+
+    .aboutus h2 {
+        font-size: 20px;
+    }
+
+    .aboutus h3 {
+        font-size: 18px;
+    }
 }
 /* -------------------------components section---------------------------------- */
 .margin-top{
     margin-top: 100px;
 }
-.component-section{
+
+/* General Styles */
+.component-section {
     background-color: var(--nav-color);
     border-radius: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin: 0 150px; /* Adjust for larger screens */
     display: flex;
     justify-content: center; 
-    padding: 10px 10px;
-    
+    padding: 10px;
 }
-.component-section .components-child{
+
+.component-section .components-child {
     background-color: #f2f2f2;
-    margin: 80px 10px 80px 100px;
-    padding: 5px;
+    margin: 80px 10px; /* Adjust for larger screens */
+    padding: 20px; /* Add padding for content spacing */
     border: 2px solid #951abe;
     width: 300px;
     height: 300px;
@@ -345,41 +446,163 @@ body.dark .search-field i{
     color: #000000;
     overflow: hidden;
     box-shadow: 1px 1px 10px #951abe;
-}
-.component-section span{
-    font-size: 30px;
     display: flex;
-    justify-content: center;
-    font-weight: bold;
-    /* margin-left: 20px; */
-}
-.donate-blood .blood-icon,.comp-icon{
-    color:#951abe;
-    font-size: 100px;
-    margin-left: 5px
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
 }
 
-.component-boxes-btn{
+.component-section .components-child span {
+    font-size: 30px;
+    display: block; /* Center the text */
+    font-weight: bold;
+    margin-top: 10px; /* Space from icon */
+}
+
+.donate-blood .blood-icon,
+.comp-icon {
+    color: #951abe;
+    font-size: 100px;
+    margin-bottom: 10px; /* Space from text */
+}
+
+.component-boxes-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     padding: 10px;
-    margin-top: 55px;
-    margin-left: 70px;
-    
     border-radius: 10px;
-    display: flex;
-    /* align-content: center; */
-    
     border: 2px solid white;
     background-color: #951abe;
     font-size: 20px;
     color: white;
-}
-.component-boxes-btn:hover{
     cursor: pointer;
+    margin-top: 20px; /* Space above button */
+    text-align: center; /* Center text in button */
+}
+
+.component-boxes-btn:hover {
     background-color: #bf00ff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .component-section {
+        margin: 0 20px; 
+        flex-direction: column;
+        padding: 0 50px ;
+    }
+
+    .component-section .components-child {
+        margin: 30px 30px; 
+        width: auto; /* Make width auto to fit screen */
+        height: auto;
+        padding: 10px;
+    } 
+
+    .component-section .components-child span {
+        font-size: 24px; /* Reduce font size for smaller screens */
+    }
+
+    .donate-blood .blood-icon,
+    .comp-icon {
+        font-size: 80px; /* Reduce icon size for smaller screens */
+    }
+
+    .component-boxes-btn {
+        font-size: 18px; /* Adjust button font size */
+        padding: 8px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .component-section {
+        margin: 0 10px; /* Further reduce margin for very small screens */
+    }
+
+    .component-section .components-child {
+        margin: 10px 0; /* Further adjust margin */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .component-section .components-child span {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    .donate-blood .blood-icon,
+    .comp-icon {
+        font-size: 60px; /* Further reduce icon size */
+    }
+
+    .component-boxes-btn {
+        font-size: 16px; /* Further adjust button font size */
+        padding: 6px; /* Further adjust button padding */
+    }
+}
+
+
+/* testimonial section  */
+.testimonial-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .testimonial-photo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-text {
+        font-size: 0.875rem;
+    }
+
+    .testimonial-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-author {
+        font-size: 0.875rem;
+    }
 }
 
 /* ----------------------------FaQs Boxes------------------------------- */
@@ -564,7 +787,10 @@ hr{
 @media (max-width:700px) {
     nav .nav-bar .sidebarOpen{
         display: block;
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .logo-main img{
+        height: 50px;
     }
     .menu{
         position: fixed;
@@ -599,6 +825,10 @@ hr{
 
 
     }
+    .logo-toggle span{
+        font-size: auto;
+        font-weight: 700;
+    }
     .nav-bar .nav-list{
         flex-direction: column;
         padding-top: 30px;
@@ -609,7 +839,12 @@ hr{
     } 
     .Image-content-left img{
         width: 30vw;
+        
         height: 40%;
+    }
+    .register-button{
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     footer{
         bottom: unset;
