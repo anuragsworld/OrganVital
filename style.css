@@ -51,8 +51,7 @@ nav{
   color: var(--nav-text-color);
 }
 .menu{
-    /* display: flex;
-    /* position: absolute; */
+   
     justify-content: space-between;
     align-items: end; 
 }
@@ -70,7 +69,6 @@ nav{
 nav .nav-bar{
     display: flex;
     justify-content: space-between;
-    /* max-width: 1000px; */
     height: 100%;
     width: 100%;
     background-color: var(--nav-color);
@@ -180,12 +178,12 @@ margin: 0 5px;
 } 
 
 .dark-light.active i.sun{
-    opacity: 0;
+    opacity: 1;
     pointer-events: auto;
 }
 .dark-light.active i.moon{
     
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
 }
 .searchToggle i.cancel{
@@ -329,97 +327,7 @@ body.dark .search-field i{
     display: flex;
 }
 
-@media (max-width: 768px) {
-    .quote {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        text-align: center;
-    }
-    
-    .quote p {
-        font-size: 40px;
-        margin-left: 0;
-    }
-    
-    .quote .writer {
-        font-size: 30px;
-        margin-left: 0;
-    }
-    
-    .quote img {
-        position: static;
-        width: 250px;
-        height: 200px;
-        margin-top: 20px;
-    }
-}
 
-@media (max-width: 480px) {
-    .quote p {
-        font-size: 30px;
-    }
-    
-    .quote .writer {
-        font-size: 20px;
-    }
-    
-    .quote img {
-        width: 200px;
-        height: 150px;
-    }
-}
-@media (max-width: 768px) {
-    .para-section h4 {
-        font-size: 24px;
-    }
-
-    .parasection2 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .parasection2 p {
-        font-size: 16px;
-        text-align: center;
-    }
-
-
-    .aboutus p {
-        font-size: 16px;
-    }
-
-    .aboutus h2 {
-        font-size: 24px;
-    }
-
-    .aboutus h3 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .para-section h4 {
-        font-size: 20px;
-    }
-
-    .parasection2 p {
-        font-size: 14px;
-    }
-
-
-    .aboutus p {
-        font-size: 14px;
-    }
-
-    .aboutus h2 {
-        font-size: 20px;
-    }
-
-    .aboutus h3 {
-        font-size: 18px;
-    }
-}
 /* -------------------------components section---------------------------------- */
 .margin-top{
     margin-top: 100px;
@@ -429,7 +337,7 @@ body.dark .search-field i{
 .component-section {
     background-color: var(--nav-color);
     border-radius: 20px;
-    margin: 0 150px; /* Adjust for larger screens */
+    margin: 0 150px; 
     display: flex;
     justify-content: center; 
     padding: 10px;
@@ -437,8 +345,8 @@ body.dark .search-field i{
 
 .component-section .components-child {
     background-color: #f2f2f2;
-    margin: 80px 10px; /* Adjust for larger screens */
-    padding: 20px; /* Add padding for content spacing */
+    margin: 80px 10px; 
+    padding: 20px; 
     border: 2px solid #951abe;
     width: 300px;
     height: 300px;
@@ -455,16 +363,16 @@ body.dark .search-field i{
 
 .component-section .components-child span {
     font-size: 30px;
-    display: block; /* Center the text */
+    display: block; 
     font-weight: bold;
-    margin-top: 10px; /* Space from icon */
+    margin-top: 10px; 
 }
 
 .donate-blood .blood-icon,
 .comp-icon {
     color: #951abe;
     font-size: 100px;
-    margin-bottom: 10px; /* Space from text */
+    margin-bottom: 10px; 
 }
 
 .component-boxes-btn {
@@ -478,132 +386,18 @@ body.dark .search-field i{
     font-size: 20px;
     color: white;
     cursor: pointer;
-    margin-top: 20px; /* Space above button */
-    text-align: center; /* Center text in button */
+    margin-top: 20px; 
+    text-align: center; 
 }
 
 .component-boxes-btn:hover {
     background-color: #bf00ff;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .component-section {
-        margin: 0 20px; 
-        flex-direction: column;
-        padding: 0 50px ;
-    }
-
-    .component-section .components-child {
-        margin: 30px 30px; 
-        width: auto; /* Make width auto to fit screen */
-        height: auto;
-        padding: 10px;
-    } 
-
-    .component-section .components-child span {
-        font-size: 24px; /* Reduce font size for smaller screens */
-    }
-
-    .donate-blood .blood-icon,
-    .comp-icon {
-        font-size: 80px; /* Reduce icon size for smaller screens */
-    }
-
-    .component-boxes-btn {
-        font-size: 18px; /* Adjust button font size */
-        padding: 8px; /* Adjust button padding */
-    }
-}
-
-@media (max-width: 480px) {
-    .component-section {
-        margin: 0 10px; /* Further reduce margin for very small screens */
-    }
-
-    .component-section .components-child {
-        margin: 10px 0; /* Further adjust margin */
-        padding: 5px; /* Reduce padding */
-    }
-
-    .component-section .components-child span {
-        font-size: 20px; /* Further reduce font size */
-    }
-
-    .donate-blood .blood-icon,
-    .comp-icon {
-        font-size: 60px; /* Further reduce icon size */
-    }
-
-    .component-boxes-btn {
-        font-size: 16px; /* Further adjust button font size */
-        padding: 6px; /* Further adjust button padding */
-    }
-}
 
 
-/* testimonial section  */
-.testimonial-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
 
-.testimonial {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 1.2rem;
-}
 
-.testimonial.active {
-    display: block;
-}
-
-.testimonial-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: #555;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .testimonial-text {
-        font-size: 1rem;
-    }
-
-    .testimonial-photo {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-@media (max-width: 480px) {
-    .testimonial-text {
-        font-size: 0.875rem;
-    }
-
-    .testimonial-photo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .testimonial-author {
-        font-size: 0.875rem;
-    }
-}
 
 /* ----------------------------FaQs Boxes------------------------------- */
 .wrapper{
@@ -784,7 +578,36 @@ hr{
 }
 
 
-@media (max-width:700px) {
+/* aboutus */
+.aboutus{
+    padding: 20px 20px ;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: var(--text-color);
+    
+}
+.aboutus h2{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+.aboutus p{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+.aboutus .goal{
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
     nav .nav-bar .sidebarOpen{
         display: block;
         font-size: 40px;
@@ -857,33 +680,136 @@ hr{
     .col:nth-child(2), .col:nth-child(3){
         flex-basis: 100%;
     }
-}
-/* aboutus */
-.aboutus{
-    padding: 20px 20px ;
-    margin-left: 30px;
-    margin-right: 30px;
-    color: var(--text-color);
-    
-}
-.aboutus h2{
-    display: flex;
-    font-size: 40px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline;
-}
-.aboutus p{
-    display: flex;
-    flex-direction: column;
+    .para-section h4 {
+        font-size: 24px;
+    }
 
-    font-size: 18px;
-    font-weight: 600;
+    .parasection2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parasection2 p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    .aboutus p {
+        font-size: 16px;
+    }
+
+    .aboutus h2 {
+        font-size: 24px;
+    }
+
+    .aboutus h3 {
+        font-size: 20px;
+    }
+
+    .component-section {
+        margin: 0 20px; 
+        flex-direction: column;
+        padding: 0 50px ;
+    }
+
+    .component-section .components-child {
+        margin: 30px 30px; 
+        width: auto; 
+        height: auto;
+        padding: 10px;
+    } 
+
+    .component-section .components-child span {
+        font-size: 24px; 
+    }
+
+    .donate-blood .blood-icon,
+    .comp-icon {
+        font-size: 80px; 
+    }
+
+    .component-boxes-btn {
+        font-size: 18px; 
+        padding: 8px; 
+    }
+    .quote {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .quote p {
+        font-size: 40px;
+        margin-left: 0;
+    }
+    
+    .quote .writer {
+        font-size: 30px;
+        margin-left: 0;
+    }
+    
+    .quote img {
+        position: static;
+        width: 250px;
+        height: 200px;
+        margin-top: 20px;
+    }
 }
-.aboutus .goal{
-    display: flex;
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline;
+@media (max-width: 480px) {
+    .quote p {
+        font-size: 30px;
+    }
+    
+    .quote .writer {
+        font-size: 20px;
+    }
+    
+    .quote img {
+        width: 200px;
+        height: 150px;
+    }
+    .component-section {
+        margin: 0 10px; /* Further reduce margin for very small screens */
+    }
+
+    .component-section .components-child {
+        margin: 10px 0; 
+        padding: 5px; 
+    }
+
+    .component-section .components-child span {
+        font-size: 20px; 
+    }
+
+    .donate-blood .blood-icon,
+    .comp-icon {
+        font-size: 60px; 
+    }
+
+    .component-boxes-btn {
+        font-size: 16px; 
+        padding: 6px; 
+    }
+    .para-section h4 {
+        font-size: 20px;
+    }
+
+    .parasection2 p {
+        font-size: 14px;
+    }
+
+
+    .aboutus p {
+        font-size: 14px;
+    }
+
+    .aboutus h2 {
+        font-size: 20px;
+    }
+
+    .aboutus h3 {
+        font-size: 18px;
+    }
 }
